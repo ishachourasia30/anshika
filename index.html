@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Inventory Management System</h1>
+        <p>Manage your products and orders easily</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>Add New Product</h2>
+
+            <form id="addForm">
+                <input type="number" id="productId"
+                    placeholder="Product ID" required>
+
+                <input type="text" id="productName"
+                    placeholder="Product Name" required>
+
+                <input type="number" id="price"
+                    placeholder="Price" min="0.01" step="0.01" required>
+
+                <input type="number" id="quantity"
+                    placeholder="Quantity" min="0" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Update Product Quantity</h2>
+
+            <form id="updateForm">
+                <input type="number" id="updateId"
+                    placeholder="Product ID" required>
+
+                <input type="number" id="newQuantity"
+                    placeholder="New Quantity" min="0" required>
+
+                <button type="submit">Update Quantity</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Place Order</h2>
+
+            <form id="orderForm">
+                <input type="number" id="orderProductId"
+                    placeholder="Product ID" required>
+
+                <input type="number" id="orderQuantity"
+                    placeholder="Order Quantity" min="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Product List</h2>
+
+            <button onclick="loadProducts()">
+                Refresh Products
+            </button>
+
+            <div id="productList"></div>
+        </section>
+
+        <section class="card">
+            <h2>Order Tracking</h2>
+
+            <button onclick="loadOrders()">
+                View Orders
+            </button>
+
+            <div id="orderList"></div>
+        </section>
+
+        <p id="message"></p>
+
+    </main>
+
+    <footer>
+        <p>Inventory Management System | C++ Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
